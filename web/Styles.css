@@ -1,0 +1,211 @@
+.contact
+{
+	width:100%;
+	height:685px;
+ background-image:url(banner-bg.jpg);
+ background-size:100%;
+ opacity:0.6;
+ margin-top:20px;
+ 
+}
+
+
+
+#body {
+	margin: 0 auto;
+	height: auto;
+	overflow: hidden;
+	padding: 20px 0;
+	width: 960px;
+        margin-top: -40px;
+}
+#body .sidebar {
+	background-color:#00F;
+	float: left;
+	margin: 0 22px 0 20px;
+	padding: 0 0 15px;
+	width: 210px;
+	opacity:0.9;
+}
+#body .sidebar h2 {
+	border-bottom: 2px solid #ffe600;
+	color: #ffe600;
+	font-size: 18px;
+	line-height: 30px;
+	margin: 0;
+	padding: 3px 0;
+	text-align: center;
+	text-transform: uppercase;
+	font-weight:bold;
+}
+#body .sidebar ul {
+	margin: 0;
+	padding: 0 0 0 20px;
+}
+#body .sidebar ul li {
+	color: #FFF;
+	font-size: 12px;
+	list-style: none;
+	line-height: 30px;
+	margin: 0;
+	padding: 10px 0;
+}
+#body .sidebar ul li span {
+	background: url(../images/icons.png) no-repeat;
+	display: block;
+	margin: 0;
+	padding: 0 0 0 23px;
+	text-transform: uppercase;
+}
+#body .sidebar ul li span.address {
+	background-position: 0 -141px;
+}
+#body .sidebar ul li span.phone {
+	background-position: 0 -166px;
+}
+#body .sidebar ul li span.email {
+	background-position: 0 -191px;
+}
+#body .sidebar ul li span.twitter {
+	background-position: 0 -216px;
+}
+#body .sidebar ul li span.facebook {
+	background-position: 0 -241px;
+}
+#body .sidebar ul ul {
+	margin: 0;
+	padding: 0;
+}
+#body .sidebar ul ul li {
+	padding: 0;
+}
+#body .sidebar ul li a {
+	color: #ffe600;
+	text-decoration: none;
+}
+#body .sidebar ul li a:hover {
+	text-decoration: underline;
+}
+#body .content {
+	float: left;
+	margin: 0 10px 0 20px;
+	padding: 0;
+	width: 678px;
+}
+
+#body  button
+{
+	margin-top:0px;
+	margin-bottom:50px;
+        margin-left:80px;
+	background-color:#fff;
+	border-radius:30px;
+	padding:25px;
+	border:solid;
+	border-color:blue;
+	width:200px;
+	height:80px;
+	font-size:24px;
+	color:blue;
+	opacity:0.7;
+}
+
+
+
+#body > ul {
+	margin: 0;
+	padding: 0;
+}
+
+
+#body .content form {
+	margin: 0;
+	padding: 0;
+}
+#body .content form label {
+	display: block;
+	margin: 0;
+	overflow: hidden;
+	padding: 10px 0;
+}
+#body .content form label span {
+	color: #00F;
+	display: block;
+	float: left;
+	line-height: 28px;
+	margin: 0;
+	padding: 0;
+	text-transform: capitalize;
+	width: 145px;
+	font-size:22px;
+}
+#body .content form label input {
+	border: 1px solid #00F;
+	color: #009;
+	display: block;
+	float: left;
+	font-family: 'Conv_Ubuntu-Light';
+	font-size: 18px;
+	height: 21px;
+	margin: 0;
+	padding: 3px 5px;
+	width: 308px;
+	opacity:0.7;
+}
+#body .content form label textarea {
+	border: 1px double #00F;
+	color: #009;
+	display: block;
+	float: left;
+	font-family: 'Conv_Ubuntu-Light';
+	font-size: 18px;
+	height: 147px;
+	margin: 0;
+	overflow: auto;
+	padding: 5px;
+	width: 528px;
+	opacity:0.7;
+}
+#body .content form #submit {
+	background-color:white;
+	border:1px solid blue;
+	border-radius:30px;
+	cursor: pointer;
+	display: block;
+	height: 50px;
+	margin: 5px 0 0 130px;
+	padding: 0;
+	width: 160px;
+	font-size:24px;
+	color:blue;
+	opacity:0.7;
+}
+
+#body .content form #submit:hover {
+	background-position: 0 -43px;
+}
+
+
+.sign{
+    
+       background-color:white;
+	border:1px solid blue;
+	border-radius:30px;
+	cursor: pointer;
+	display: block;
+	height: 50px;
+	
+	padding: 0;
+	width: 160px;
+	font-size:24px;
+	color:blue;
+	opacity:0.7;
+        margin-top:30px;
+}
+
+.link{
+     text-decoration: none;
+      font-size: 30px;
+      color: green; 
+    
+}

@@ -1,0 +1,401 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html" lang="en-gb" class="no-js">
+    
+    <h:head>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+        <script language="javascript">
+            function validatename() {
+                var mail = document.getElementById("loginform:outmail").value;
+                if (mail == "")
+                {
+                    document.getElementById("errormsg").innerHTML = "Please Enter Mail";
+                    document.getElementById("errormsg").style.color = "red";
+                } else
+                {
+                    document.getElementById("errormsg").innerHTML = "That's Fine";
+                    document.getElementById("errormsg").style.color = "green";
+                }
+            }
+            function validatepass() {
+                var pass = document.getElementById("loginform:outpass").value;
+                if (pass == "")
+                {
+                    document.getElementById("errorpass").innerHTML = "Please Enter Password";
+                    document.getElementById("errorpass").style.color = "red";
+                } else
+                {
+                    document.getElementById("errorpass").innerHTML = "That's Fine";
+                    document.getElementById("errorpass").style.color = "green";
+                }
+            }
+        </script>
+
+
+        <title>Home Page</title>
+        <meta name="description" content=""/>
+        <meta name="author" content="WebThemez"/>
+        <!--<link rel='stylesheet' href='Styles.css' type='text/css' />-->  
+        
+        <link rel="stylesheet" href="css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="css/isotope.css" media="screen" />
+        <link rel="stylesheet" href="js/fancybox/jquery.fancybox.css" type="text/css" media="screen" />
+        <link href="css/animate.css" rel="stylesheet" media="screen"/>
+        <!-- Owl Carousel Assets -->
+        <link href="js/owl-carousel/owl.carousel.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="css/styles.css" />
+        <!-- Font Awesome -->
+        <link href="font/css/font-awesome.min.css" rel="stylesheet"/>
+    </h:head>
+   
+    <h:body>
+
+        <div>
+            <div style="margin-left: 860px; margin-top: 75px; margin-bottom: 0px">
+
+               
+
+                <h:form id="loginform">
+
+                    <label for="email"> <span> Email : </span> 
+                        <h:inputText id="outmail" value="#{user.mail}" onblur="validatename()" required="true" style="height:24px; margin-left: 32.5px" requiredMessage="Email field is empty" /> 
+                        <h:message for="outmail" errorStyle="color:red; display:block;width:250px;"/>
+                        <label id="errormsg"/>
+                    </label>
+                    <br/>
+                    <label for="passid"> <span> Password : </span>
+                        <h:inputSecret id="outpass" value="#{user.upassword}" onblur="validatepass()" required="true" style="height: 24px;" requiredMessage="Password field is empty"/>
+                        <h:message for="outpass" errorStyle="color:red; display:block; width:250px;"/>
+                        <label id="errorpass"/>
+                    </label>
+                    <br/>
+                    <div>  
+                        <h:commandButton value="Login" action="#{user.login()}" class="bb" />   
+                    </div>
+                </h:form> 
+                <br/> <br/>
+                <div style="margin-top:-46px; margin-left: 80px ">
+                    <h:outputLink value="register.xhtml" > Sign UP </h:outputLink> 
+                    <div style="margin-right: 50px;"> <h:outputLink value="faces/forgetpass.xhtml" > Forget Password </h:outputLink> 
+                    </div>
+                </div>
+            </div> 
+        </div> 
+                     
+        <header class="header">
+            <div class="container">
+                <nav class="navbar navbar-inverse" role="navigation">
+                    <div class="navbar-header">
+                        <button type="button" id="nav-toggle" class="navbar-toggle" data-toggle="collapse" data-target="#main-nav"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        <a href="#" class="navbar-brand scroll-top logo  animated bounceInLeft"><b><i></i>HOSPITAL | CALL AMBULANCE</b></a> </div>
+                        <!--/.navbar-header-->
+                    <div id="main-nav" class="collapse navbar-collapse">
+                        <ul class="nav navbar-nav" id="mainNav">
+                            <li class="active" id="firstLink"><a href="#home" class="scroll-link">Home</a></li>
+                            <li><a href="#services" class="scroll-link">Services</a></li>
+                            <li><a href="#aboutUs" class="scroll-link">About Us</a></li>
+                            <li><a href="#work" class="scroll-link">Our Facilities</a></li>
+                            <li><a href="#team" class="scroll-link">Team</a></li>
+                             <li><a href="#contactUs" class="scroll-link">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!--/.navbar-collapse--> 
+                </nav>
+                <!--/.navbar--> 
+            </div>
+            <!--/.container--> 
+            </header>
+        <!--/.header-->
+        <div id="#top"></div>
+    
+        <section id="home">
+            <div class="banner-container"> <img src="images/banner-bg.jpg" alt="banner" />
+                <div class="container banner-content">
+                    <div class="hero-text animated fadeInDownBig">
+                        <h1 class="responsive-headline" style="font-size: 40px;">We believe in recovery</h1>
+                        <a href="#basics" class="arrow-link"> <i class="fa fa-arrow-circle-down fa-2x"></i> </a> 
+                        <!--<p>Awesome theme for your Business or Corporate site to showcase <br/>
+                          your product and service.</p>--> 
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="page-section colord">
+            <div class="container">
+                <div class="heading text-center"> 
+                  <!-- Heading -->
+                  <h2>Our Services</h2>
+                  <p>We provide you with all the health care services you need</p>
+                </div>
+                <div class="row"> 
+                    <!-- item -->
+                    <div class="col-md-3 text-center c1"> <i class="fa fa-life-ring fa-2x circle"></i>
+                        <h3><span class="id-color">Cardio Monitoring</span></h3>
+                        <p>CT Scan<br/> MRI Scan<br/> Ultrasound<br/> Arterial catheterization<br/></p>
+                    </div>
+                    <!-- end: -->
+                    <!-- item -->
+                    <div class="col-md-3 text-center c2"> <i class="fa fa-plus-square fa-2x circle"></i>
+                        <h3><span class="id-color">Medical Treatment</span></h3>
+                        <p>Medicine<br/> Mesotherapy<br/> Chemotherapy<br/> Physiotherapy<br/></p>
+                    </div>
+                    <!-- end: --> 
+
+                    <!-- item -->
+                    <div class="col-md-3 text-center c1"> <i class="fa fa-female fa-2x circle"></i>
+                        <h3><span class="id-color">Women Care Help</span></h3>
+                        <p>Nutrition<br/> Pregnancy<br/> Gynecology<br/> Mammography<br/></p>
+                    </div>
+                    <!-- end: --> 
+
+                    <!-- item -->
+                    <div class="col-md-3 text-center c2"> <i class="fa fa-child fa-2x circle"></i>
+                        <h3><span class="id-color">Child Care</span></h3>
+                        <p>Nursery<br/> Nutrition<br/> Toddler care<br/> Preschool care<br/></p>
+                    </div>
+                  <!-- end:--> 
+                </div>
+            </div>
+            <!--/.container--> 
+        </section>
+
+        <section id="aboutUs">
+            <div class="container">
+                <div class="heading text-center"> 
+                    <!-- Heading -->
+                    <h2>About Us</h2>
+                    <p>We are hoping to improve the health care service and quality by the use of technology and IoT </p>
+                </div>
+                <div class="row feature design">
+                    <div class="six columns right">
+                        <h3>New and Modern Design</h3>
+                        <p>A modern design that reflects our vision of providing the best accommodation in our healthy environment that meets the global and local
+                         standards.</p>
+                        <p>We believe that a new and modern technology should only be represented by a new and modern buildings and architecture that reflects 
+                        our vision to the future, and our dedication and desire of achieving a step forward to a new era of a better health care that everyone 
+                        deserves.</p>
+                    </div>
+                    <div class="six columns feature-media left"> <img src="images/feature-img-1.png" alt=""/> </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="work" class="page-section page">
+            <div class="container text-center">
+                <div class="heading">
+                  <h2>Our Facilities</h2>
+                  <p>We assure you a clean environment for your accommodation, the best doctors and the latest technology</p>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div id="portfolio">
+                            <ul class="items list-unstyled clearfix animated fadeInRight showing" data-animation="fadeInRight" style="position: relative; height: 438px;">
+                                <li class="item branding" style="position: absolute; left: 0px; top: 0px;"> 
+                                    <a href="images/work/1.jpg" class="fancybox"> <img src="images/work/1.jpg" alt=""/>
+                                        <div class="overlay"> <span>Operation room 1</span> </div>
+                                    </a> 
+                                </li>
+                                <li class="item photography" style="position: absolute; left: 292px; top: 0px;"> 
+                                    <a href="images/work/2.jpg" class="fancybox"> <img src="images/work/2.jpg" alt=""/>
+                                        <div class="overlay"> <span>CT scan</span> </div>
+                                    </a> 
+                                </li>
+                                <li class="item branding" style="position: absolute; left: 585px; top: 0px;"> 
+                                    <a href="images/work/3.jpg" class="fancybox"> <img src="images/work/3.jpg" alt=""/>
+                                        <div class="overlay"> <span>Reception</span> </div>
+                                    </a> 
+                                </li>
+                                <li class="item photography" style="position: absolute; left: 877px; top: 0px;"> 
+                                    <a href="images/work/4.jpg" class="fancybox"> <img src="images/work/4.jpg" alt=""/>
+                                        <div class="overlay"> <span>Intensive care</span> </div>
+                                    </a> 
+                                </li>
+                                <li class="item photography" style="position: absolute; left: 0px; top: 219px;"> 
+                                    <a href="images/work/5.jpg" class="fancybox"> <img src="images/work/5.jpg" alt=""/>
+                                        <div class="overlay"> <span>Operation room 2</span> </div>
+                                    </a> 
+                                </li>
+                                <li class="item web" style="position: absolute; left: 292px; top: 219px;"> 
+                                    <a href="images/work/6.jpg" class="fancybox"> <img src="images/work/6.jpg" alt=""/>
+                                        <div class="overlay"> <span>Rooms</span> </div>
+                                    </a> 
+                                </li>
+                                <li class="item photography" style="position: absolute; left: 585px; top: 219px;"> 
+                                    <a href="images/work/7.jpg" class="fancybox"> <img src="images/work/7.jpg" alt=""/>
+                                        <div class="overlay"> <span>Supervising intensive care</span> </div>
+                                    </a> 
+                                </li>
+                                <li class="item web" style="position: absolute; left: 877px; top: 219px;"> 
+                                    <a href="images/work/8.jpg" class="fancybox"> <img src="images/work/8.jpg" alt=""/>
+                                        <div class="overlay"> <span>Rehabilitation</span> </div>
+                                    </a> 
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="team" class="page-section">
+            <div class="container">
+                <div class="heading text-center"> 
+                    <!-- Heading -->
+                    <h2>Our Team</h2>
+                    <p>We are proud to have the elite doctors in each department</p>
+                </div>
+                <!-- Team Member's Details -->
+                <div class="team-content">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6 col-xs-6"> 
+                            <!-- Team Member -->
+                            <div class="team-member pDark"> 
+                                <!-- Image Hover Block -->
+                                <div class="member-img"> 
+                                    <!-- Image  --> 
+                                    <img class="img-responsive" src="images/photo-1.jpg" alt=""/> 
+                                </div>
+                                <!-- Member Details -->
+                                <h4>Dr/ Omar</h4>
+                                <!-- Designation --> 
+                                <span class="pos">Director</span> 
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6"> 
+                            <!-- Team Member -->
+                            <div class="team-member pDark"> 
+                                <!-- Image Hover Block -->
+                                <div class="member-img"> 
+                                    <!-- Image  --> 
+                                    <img class="img-responsive" src="images/photo-2.jpg" alt=""/> 
+                                </div>
+                                <!-- Member Details -->
+                                <h4>Dr/ Aliaa</h4>
+                                <!-- Designation --> 
+                                <span class="pos">Surgery Dept</span> 
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6"> 
+                            <!-- Team Member -->
+                            <div class="team-member pDark"> 
+                                <!-- Image Hover Block -->
+                                <div class="member-img"> 
+                                    <!-- Image  --> 
+                                    <img class="img-responsive" src="images/photo-3.jpg" alt=""/> 
+                                </div>
+                                <!-- Member Details -->
+                                <h4>Dr/ Mohamed</h4>
+                                <!-- Designation --> 
+                                <span class="pos">Cardiology Dept</span> 
+                            </div>
+                        </div>
+                        <div class="col-md-3 col-sm-6 col-xs-6"> 
+                            <!-- Team Member -->
+                            <div class="team-member pDark"> 
+                                <!-- Image Hover Block -->
+                                <div class="member-img"> 
+                                    <!-- Image  --> 
+                                    <img class="img-responsive" src="images/photo-4.jpg" alt=""/> 
+                                </div>
+                                <!-- Member Details -->
+                                <h4>Dr/ Karim</h4>
+                                <!-- Designation --> 
+                                <span class="pos">Pediatrics Dept</span> 
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--/.container--> 
+        </section>
+    
+        <section id="contactUs" class="contact-parlex">
+            <div class="parlex-back">
+                <div class="container">
+                    <div class="row">
+                        <div class="heading text-center"> 
+                            <!-- Heading -->
+                            <h2>Contact Us</h2>
+                            <p>Contact us to express your opinion and help us introduce a better service for you and the others</p>
+                        </div>
+                    </div>
+                    <div class="row mrgn30">
+                        <form method="post" action="" id="contactfrm" role="form">
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" class="form-control" name="name" id="name" placeholder="Enter name" title="Please enter your name (at least 2 characters)"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Enter email" title="Please enter a valid email address"/>
+                                    <button name="submit" type="submit" class="btn btn-lg btn-primary" id="submit">Submit</button>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div class="form-group">
+                                    <label for="comments">Comments</label>
+                                    <textarea name="comment" class="form-control" id="comments" cols="3" rows="5" placeholder="Enter your message…" title="Please enter your message (at least 10 characters)"></textarea>
+                                </div>
+                                <div class="result"></div>
+                            </div>
+                        </form>
+                    <div class="col-sm-4">
+                        <h4>Address:</h4>
+                        <address>
+                      Hospital<br/>
+                        6 OKTOBER, Street<br/>
+                        GIZA, SA 02434-34534 EGYPT <br/>
+                        </address>
+                        <h4>Phone:</h4>
+                        <address>
+                        011-454333854<br/>
+                        </address>
+                    </div>
+                  </div>
+                </div>
+                <div class="container">
+                    <div class="social text-center"> 
+                        <a href="#"><i class="fa fa-twitter"></i></a> 
+                        <a href="#"><i class="fa fa-facebook"></i></a> 
+                        <a href="#"><i class="fa fa-dribbble"></i></a> 
+                        <a href="#"><i class="fa fa-flickr"></i></a> 
+                        <a href="#"><i class="fa fa-github"></i></a> 
+                        <a href="#"><i class="fa fa-android"></i></a>
+                    </div>
+                    <!--CLEAR FLOATS--> 
+                  </div>
+                <!--/.container--> 
+            </div>
+        </section>
+    
+        <!--/.page-section-->
+        <section class="copyright">
+            <div class="container">
+                <div class="row">
+                   
+  <div class="col-sm-12 text-center"> Copyright 2015 | All Rights Reserved --Made by <a href="##">Call Ambulance Team </a> </div>
+                </div>
+                <!-- / .row --> 
+            </div>
+        </section>
+    
+        <a href="#top" class="topHome"><i class="fa fa-chevron-up fa-2x"></i></a> 
+
+        <!--[if lte IE 8]><script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script><![endif]--> 
+        <script src="js/modernizr-latest.js"></script> 
+        <script src="js/jquery-1.8.2.min.js" type="text/javascript"></script> 
+        <script src="js/bootstrap.min.js" type="text/javascript"></script> 
+        <script src="js/jquery.isotope.min.js" type="text/javascript"></script> 
+        <script src="js/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script> 
+        <script src="js/jquery.nav.js" type="text/javascript"></script> 
+        <script src="js/jquery.fittext.js"></script> 
+        <script src="js/waypoints.js"></script> 
+        <script src="js/custom.js" type="text/javascript"></script> 
+        <script src="js/owl-carousel/owl.carousel.js"></script>
+    
+    </h:body>
+</html>
